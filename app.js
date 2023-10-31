@@ -1,12 +1,12 @@
 require('dotenv').config()
-//async errors
+require('express-async-errors');
 
 const express=require('express');
 const app=express();
 
 
 const connectDB = require('./db/connect');
-
+const productsRouter = require('./routes/products');
 
 // Middleware
 const notFoundMiddleware = require('./middleware/not-found');
@@ -14,7 +14,7 @@ const errorHandlerMiddleware = require('./middleware/error-handler')
 
 
 // Routes
-app.use('api/v1/products',);
+app.use('/api/v1/products',productsRouter);
 
 
 app.use(notFoundMiddleware);
