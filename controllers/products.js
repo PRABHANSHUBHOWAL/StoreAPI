@@ -10,9 +10,9 @@ const searchproducts = async (req,res) =>{
     res.status(200).json({msg : 'getAll'});
 }
 
-// const getAllProducts = async (req,res) =>{
-//     res.status(200).json({msg : 'getAll'});
-// }
+const sortProducts = async (req,res) =>{
+    res.status(200).json({msg : 'getAll'});
+}
 
 
 module.exports= {   
